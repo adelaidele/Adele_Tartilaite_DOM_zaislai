@@ -1,66 +1,82 @@
 {
-  "toys": [
-    {
-      "id": "1",
-      "title": "Rubik cube",
-      "price": {
-        "currency": "€",
-        "amount": 12
-      },
-      "ageRestrictions": {
-        "from": 5
-      },
-      "discount": {
-        "type": "absolute",
-        "amount": 5
-      },
-      "imgSrc": "https://unsplash.it/200/200"
-    },
-    {
-      "id": "3",
-      "title": "Toy car",
-      "price": {
-        "currency": "$",
-        "amount": 100
-      },
-      "ageRestrictions": {
-        "from": 3
-      },
-      "discount": {
-        "type": "percentage",
-        "amount": 15
-      },
-      "imgSrc": "https://unsplash.it/200/200"
-    },
-    {
-      "id": "4",
-      "title": "Toy kitchen",
-      "price": {
-        "currency": "$",
-        "amount": 219
-      },
-      "ageRestrictions": {
-        "from": 6
-      },
-      "discount": {
-        "type": "absolute",
-        "amount": 15
-      },
-      "imgSrc": "https://unsplash.it/200/200"
-    },
-    {
-      "id": "5",
-      "title": "Transformer",
-      "price": {
-        "currency": "$",
-        "amount": 49
-      },
-      "ageRestrictions": null,
-      "discount": {
-        "type": "toFixed",
-        "amount": 40
-      },
-      "imgSrc": "https://unsplash.it/200/200"
-    }
-  ]
-}
+    "toys": [
+       {
+          "id": "1",
+          "title": "Rubik cube",
+          "price": {
+             "currency": "€",
+             "amount": 12
+          },
+          "ageRestrictions": {
+             "from": 5
+          },
+          "discount": {
+             "type": "absolute",
+             "amount": 5
+          },
+          "imgSrc": "https://unsplash.it/200/200"
+       },
+       {
+          "id": "2",
+          "title": "Puzzle",
+          "price": {
+             "currency": "$",
+             "amount": 65
+          },
+          "ageRestrictions": {
+             "from": 10
+          },
+          "discount": {
+             "type": "toFixed",
+             "amount": 30
+          },
+          "imgSrc": "https://unsplash.it/200/200"
+       },
+       {
+          "id": "3",
+          "title": "Toy car",
+          "price": {
+             "currency": "$",
+             "amount": 100
+          },
+          "ageRestrictions": {
+             "from": 3
+          },
+          "discount": {
+             "type": "percentage",
+             "amount": 15
+          },
+          "imgSrc": "https://unsplash.it/200/200"
+       },
+       {
+          "id": "4",
+          "title": "Toy kitchen",
+          "price": {
+             "currency": "$",
+             "amount": 219
+          },
+          "ageRestrictions": {
+             "from": 6
+          },
+          "discount": {
+             "type": "absolute",
+             "amount": 15
+          },
+          "imgSrc": "https://unsplash.it/200/200"
+       },
+       {
+          "id": "5",
+          "title": "Transformer",
+          "price": {
+             "currency": "$",
+             "amount": 49
+          },
+          "ageRestrictions": null,
+          "discount": {
+             "type": "toFixed",
+             "amount": 40
+          },
+          "imgSrc": "https://unsplash.it/200/200"
+       }
+    ]
+ }

@@ -3,10 +3,12 @@ const baseUrl = "http://localhost:3000";
 
 class API {
     static fetchToys = (success, failure) => {
-        fetch(`${baseUrl}/toys`)
-            .then(res => res.json())
-            .then(success)
-            .catch(failure);
+        setTimeout(() => {
+            fetch(`${baseUrl}/toys`)
+                .then(res => res.json())
+                .then(success)
+                .catch(failure);
+        }, 1000)
     }
 
     static deleteToy = (id, success, failure) => {
