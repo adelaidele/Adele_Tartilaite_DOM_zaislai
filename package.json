@@ -1,0 +1,20 @@
+{
+  "name": "adele-tartilaite-dom-zaislai",
+  "version": "1.0.0",
+  "description": "bandomasis darbas zaislai",
+  "main": "index.js",
+  "scripts": {
+    "start-unix": "node_modules/.bin/json-server --watch database.json",
+    "start-win": "node_modules\\.bin\\json-server --watch database.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adelaidele/Adele_Tartilaite_DOM_zaislai.git"
+  },
+  "author": "Adele Tartilaite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adelaidele/Adele_Tartilaite_DOM_zaislai/issues"
+  },
+  "homepage": "https://github.com/adelaidele/Adele_Tartilaite_DOM_zaislai#readme"
+}
