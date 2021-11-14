@@ -1,18 +1,30 @@
 class ToysGridComponent {
-    constructor() {
+    constructor(){
         this.state = {
             loading: false,
-            Toys: []
+            toys: []
         }
         this.init();
     }
-    fetchToys = () => API.fetchToys(this.saveToys, alert);
+
+    fetchToys = () => API.fetchToys(
+        (toys) => {
+            this.state.loading = false;
+            this.saveToys(toys);
+        },
+         (err) => {
+             alert(err);
+             this.state.loading = false;
+             this.render();
+        });
 
     saveToys = (toys) => {
-        this.state.toys = toys;
-        this.state.loading = false;
-
+        this.state = {toys, loading: false}
         this.render();
+    }
+
+    deleteCard = (id) => {
+        API.deleteToy(id, () => API.fetchToys(this.saveToys, alert),alert);
     }
 
     init = () => {
@@ -32,20 +44,23 @@ class ToysGridComponent {
     }
 
     render = () => {
-        const { loading, toys } = this.state;
-        if (loading) {
-            this.htmlElement.innerHTML = 'siunciama.';
+        const {loading, toys} = this.state;
+        
+        if(loading){
             this.htmlElement.innerHTML = "<div class='text-center'><img src='assets/loading.gif'/></div>";
-        } else if (toys.length > 0) {
-            this.htmlElement.innerHTML = '';
+        } else if (toys.length > 0){     
+            this.htmlElement.innerHTML = '';       
             const toyElements = toys
-             .map(toy => new ToyCardComponent(toy))
-             .map(toy => toy.htmlElement)
-             .map(this.wrapInColumn);
+              .map(({id, ...props}) => new ToyCardComponent({
+                ...props,
+                onDelete: () => this.deleteCard(id)
+              }))
+              .map(toy => toy.htmlElement)
+              .map(this.wrapInColumn);
 
             this.htmlElement.append(...toyElements);
         } else {
             this.htmlElement.innerHTML = "<h2>Zaislu nera</h2>";
-        }
+        } 
     }
 }

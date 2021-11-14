@@ -17,14 +17,3 @@ class API {
             .catch(failure);
     }
 }
-
-// API.fetchToys(
-//     console.log,
-//     console.error
-// ) 
-
-// API.deleteToy(
-//     '2',
-//     console.log,
-//     console.error
-// )

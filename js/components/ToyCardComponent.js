@@ -48,7 +48,7 @@ class ToyCardComponent {
     }
 
     init = () => {
-        const { title, imgSrc } = this.props;
+        const { title, imgSrc, onDelete } = this.props;
 
         this.htmlElement = document.createElement('article');
         this.htmlElement.className = "card p-3 shadow";
@@ -60,7 +60,10 @@ class ToyCardComponent {
             <li>${this.formatAgeRestriction()}</li>
             <li>Kaina: ${this.formatPrice()}</li>
         </ul>
+        <button class="btn btn-danger">Delete</button>
         </div>
         `;
+        const btn = this.htmlElement.querySelector("button");
+        btn.addEventListener('click', onDelete);
     };
 }
